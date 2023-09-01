@@ -12,6 +12,9 @@
     />
 
     <style>
+      body {
+        background-color: black;
+      }
       * {
         margin: 0;
         padding: 0;
@@ -24,10 +27,14 @@
       }
       .form-element {
         background-color: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         min-height: 100px;
+        width: 500px;
+      }
+      .basic-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
       }
       .details {
         height: 50px;
@@ -35,6 +42,7 @@
         border-radius: 50px;
         padding-left: 20px;
         font-size: 20px;
+        padding-bottom: 10px;
       }
       .details::placeholder {
         font-size: 20px;
@@ -50,7 +58,7 @@
       .next-back {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-items: centre;
         color: black;
       }
@@ -105,20 +113,23 @@
       .radio-values {
         color: white;
       }
-      .choose {
+      
+      .choose{
         display: flex;
         flex-direction: row;
         background-color: black;
         justify-content: space-between;
+        float: center;
         align-items: center;
-        margin-top: ;
+        width: 500px;
+        margin-bottom: 25px;
       }
     </style>
   </head>
   <body>
     <div class="basic-form">
       <div class="form-element">
-        <h1>Input your details belows</h1>
+        <h1 style="text-align: center">Input your details belows</h1>
       </div>
       <div class="form-element">
         <p class="form description"></p>
@@ -129,7 +140,7 @@
         <input class="details" type="text" placeholder="College:" />
       </div>
       <div class="choose">
-        <p>Department</p>
+        <p>Department:</p>
         <div class="name">
           <input
             class="radio-values"
@@ -168,10 +179,37 @@
           <label for="contactChoice1"><p>MECH/AUTO</p></label>
         </div>
       </div>
-      <div class="form-element">
-        <p class="form description"></p>
-        <input class="details" type="text" placeholder="Department:" />
+      <div class="choose">
+        <p>Year:</p>
+        <div class="name">
+          <input
+            class="radio-values"
+            type="radio"
+            id="contactChoice1"
+            name="contact"
+          />
+          <label for="contactChoice1"><p>FY</p></label>
+        </div>
+        <div class="name">
+          <input
+            class="radio-values"
+            type="radio"
+            id="contactChoice2"
+            name="contact"
+          />
+          <label for="contactChoice2"><p>SY</p></label>
+        </div>
+        <div class="name">
+          <input
+            class="radio-values"
+            type="radio"
+            id="contactChoice3"
+            name="contact"
+          />
+          <label for="contactChoice3"><p>TY</p></label>
+        </div>
       </div>
+
       <div class="form-element">
         <p class="form description"></p>
         <input class="details" type="text" placeholder="Phone number: " />
@@ -210,18 +248,19 @@
           <label for="contactChoice3"><p>Other</p></label>
         </div>
       </div>
-    </div>
-    <div class="form-element">
-      <div class="next-back">
-        <div>
-          <button class="back">
-            <a class="linked" href="index.html">Back</a>
-          </button>
-        </div>
-        <div>
-          <button class="next">
-            <a class="linked" href="detailed-form.html">Submit</a>
-          </button>
+
+      <div class="form-element">
+        <div class="next-back">
+          <div>
+            <button class="back">
+              <a class="linked" href="index.html">Back</a>
+            </button>
+          </div>
+          <div>
+            <button class="next">
+              <a class="linked" href="index.html">Submit</a>
+            </button>
+          </div>
         </div>
       </div>
     </div>
